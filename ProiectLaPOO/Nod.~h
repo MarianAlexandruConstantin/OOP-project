@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------------
+
+#ifndef NodH
+#define NodH
+//---------------------------------------------------------------------------
+  class Nod
+{
+  protected:
+    double val;
+    char op;
+  public:
+    double getVal(){return this->val;}
+    char getOp()  {return this->op;}
+};
+
+class NodCoada: public Nod{
+
+protected:
+    NodCoada* next;
+public:
+   NodCoada(double v,char op);
+   void adauga(NodCoada*& c,double v,char o);
+   void elimina(NodCoada*& c,double *v, char* o);
+};
+
+
+#endif
+ 
